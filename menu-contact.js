@@ -159,6 +159,18 @@
       <script type="text/javascript" src="scripts/custom.js"></script>
       </body>
       </html>
+      `;
+
+      module.exports = {
+        title: 'Welcome',
+        page,
+        data: async ({ dev }) => ({
+          location: await axios.get('https://opensheet.elk.sh/1vkEHHOS4LG7K8jQpYBxA2sJJYfuP07nuku0tvdh-B10/5').then((res) => data = res.data[0])
+          .catch(err => console.error(err))
+        
+        }),
+      };
+    
 
 
       `;
