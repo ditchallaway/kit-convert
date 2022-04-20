@@ -12,6 +12,7 @@
       <title> ${JSON.stringify(data.location.name).replace(/\"/g, "")} | ${JSON.stringify(data.location.locality).replace(/\"/g, "")} | ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}</title>
       <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
       <link rel="stylesheet" type="text/css" href="styles/style.css">
+      <link rel="stylesheet" type="text/css" href="https://www.brutalist.design/css/main.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
       <link rel="manifest" href="_manifest.json" data-pwa-version="2.0">
