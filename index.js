@@ -9,10 +9,16 @@
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-      <title> ${JSON.stringify(data.location.name).replace(/\"/g, "")} | ${JSON.stringify(data.location.locality).replace(/\"/g, "")} | ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}</title>
+      <title>
+      
+      ${JSON.stringify(data.location.name).replace(/\"/g, "")} |
+      
+      ${JSON.stringify(data.location.locality).replace(/\"/g, "")} | 
+      
+      ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}</title>
+      
       <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
       <link rel="stylesheet" type="text/css" href="styles/style.css">
-      <link rel="stylesheet" type="text/css" href="https://www.brutalist.design/css/main.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">    
       <link rel="manifest" href="_manifest.json" data-pwa-version="2.0">
@@ -22,8 +28,14 @@
       <link rel="manifest" href="/site.webmanifest?v=2.0">
       <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2.0" color="#ff9c57">
       <link rel="shortcut icon" href="/favicon.ico?v=2.0">
-      <meta name="apple-mobile-web-app-title" content="${JSON.stringify(data.location.name).replace(/\"/g, "")}">
-      <meta name="application-name" content="${JSON.stringify(data.location.name).replace(/\"/g, "")}">
+      <meta name="apple-mobile-web-app-title" content="
+      
+      ${JSON.stringify(data.location.name).replace(/\"/g, "")}">
+      
+      <meta name="application-name" content="
+      
+      ${JSON.stringify(data.location.name).replace(/\"/g, "")}">
+      
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#edeefb">
       </head>
@@ -35,7 +47,10 @@
       <div id="page" class="pattern-grid-xl color-highlight">
           
           <div class="header header-fixed header-logo-center">
-              <a href="/" class="header-title">${JSON.stringify(data.location.name).replace(/\"/g, "")}</a>
+              <a href="/" class="header-title">
+              
+              ${JSON.stringify(data.location.name).replace(/\"/g, "")}</a>
+              
               <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
               <a href="#" data-menu="menu-main" class="header-icon header-icon-4"><i class="fas fa-bars"></i></a>
               <a href="#" data-toggle-theme class="header-icon header-icon-3 show-on-theme-dark"><i class="fas fa-sun"></i></a>
@@ -53,16 +68,35 @@
               
           <div class="page-content header-clear-medium">
                 
-      
               
       <!--#red Hero-->
           <div class="card card-style bg-highlight bg-0 mb-4" data-card-height="300">
               <div class="card-bottom p-3">
-                  <h1 class="color-theme hero-title line-height-s"> ${JSON.stringify(data.location.name).replace(/\"/g, "")} </h1>
-                  <p class="hero-address"><i class="fa fa-map-marker mr-2 color-red-dark"></i> ${JSON.stringify(data.location.address_line_1).replace(/\"/g, "")}, ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} ${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}</p>
+                  <h1 class="color-theme hero-title line-height-s"> 
+                  
+            ${JSON.stringify(data.location.name).replace(/\"/g, "")} </h1>
+                  
+                  <p class="hero-address"><i class="fa fa-map-marker mr-2 color-red-dark"></i> 
+                  
+            ${JSON.stringify(data.location.address_line_1).replace(/\"/g, "")}
+
+            ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}
+      
+            ${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}
+
+                  </p>
                   <div class="tag-cloud pt-2">
-                      <span class="font-10 badge bg-highlight color-white"> ${JSON.stringify(data.location.cat1).replace(/\"/g, "")} </span> <span class="font-10 badge bg-highlight color-white"> ${JSON.stringify(data.location.cat2).replace(/\"/g, "")} </span><span class="font-10 badge bg-highlight color-white">${JSON.stringify(data.location.cat3).replace(/\"/g, "")}</span> <span class="font-10 badge bg-highlight color-white">${JSON.stringify(data.location.cat4).replace(/\"/g, "")}</span>
-                  </div>
+                      <span class="font-10 badge bg-highlight color-white"> 
+                      
+        ${JSON.stringify(data.location.cat1).replace(/\"/g, "")} </span> <span class="font-10 badge bg-highlight color-white"> 
+        
+        ${JSON.stringify(data.location.cat2).replace(/\"/g, "")} </span><span class="font-10 badge bg-highlight color-white">
+        
+        ${JSON.stringify(data.location.cat3).replace(/\"/g, "")}</span> <span class="font-10 badge bg-highlight color-white">
+        
+        ${JSON.stringify(data.location.cat4).replace(/\"/g, "")}</span>
+                  
+            </div>
               </div>
               <div class="card-overlay bg-gradient-fade-small"></div>
               <div class="card card-style bg-40 m-0 bg-transparent card-overlay-infinite card-blur-image opacity-50" data-card-height="300"></div>
@@ -71,8 +105,11 @@
       
       
       <!--cta | start-->
-          <a href="https://square.site/book/${JSON.stringify(data.location.id).replace(/\"/g, "")} " class="card card-style external-link mb-4 btn btn-lg btn-full font-23 font-600 gradient-highlight rounded-m">Book Online</a> 
-      <!--cta | end-->
+          <a href="https://square.site/book/
+          
+          ${JSON.stringify(data.location.id).replace(/\"/g, "")} " class="card card-style external-link mb-4 btn btn-lg btn-full font-23 font-600 gradient-highlight rounded-m">Book Online</a> 
+      
+          <!--cta | end-->
       
       <!--#blue link-stack | start-->
           <a href="services.html" class="card card-style mb-4 pattern-zigzag-sm col bg-highlight" data-card-height="150">
@@ -136,11 +173,26 @@
               <div class='responsive-iframe max-iframe'><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10619.323537744858!2d-116.5655856!3d48.2868693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd859e872c1f9a599!2sWax%20and%20Skin%20Care!5e0!3m2!1sen!2sus!4v1605313586258!5m2!1sen!2sus"
                       width="850" height="180" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
               <div class="menu-title">
-                  <p class="color-highlight"> ${JSON.stringify(data.location.name).replace(/\"/g, "")} </p>
-                  <h1 class="not-gruppo"> ${JSON.stringify(data.location.locality).replace(/\"/g, "")}, ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}</h1>
-              </div>
+                  <p class="color-highlight"> 
+        
+                  ${JSON.stringify(data.location.name).replace(/\"/g, "")} </p><h1 class="not-gruppo"> 
+                  
+                  ${JSON.stringify(data.location.locality).replace(/\"/g, "")}
+
+                  ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}</h1>
+
+                  </div>
               <div class="content mt-n2">
-                  <p><i class="fa fa-map-marker color-red-dark mr-2"></i> ${JSON.stringify(data.location.address_line_1).replace(/\"/g, "")}, ${JSON.stringify(data.location.locality).replace(/\"/g, "")}, ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} ${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}
+                  <p><i class="fa fa-map-marker color-red-dark mr-2"></i> 
+                  
+                  ${JSON.stringify(data.location.address_line_1).replace(/\"/g, "")}
+
+                  ${JSON.stringify(data.location.locality).replace(/\"/g, "")}
+
+                  ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} 
+                  
+                  ${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}
+
                   </p>
                   <div class="row">
                       <div class="col-6">

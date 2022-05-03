@@ -8,7 +8,7 @@
       </div>
       <div class="card-bottom">
           <h1 class="color-white ps-3 mb-n1 font-28">${JSON.stringify(data.location.name).replace(/\"/g, "")}</h1>
-          <p class="mb-2 ps-3 font-12 color-white opacity-50"><i class="fa fa-map-marker mr-2 color-red-dark"></i>1217 ${JSON.stringify(data.location.name).replace(/\"/g, "")} Mountain Rd 201a, ${locations.address.administrative_district_level_1}, Idaho ${locations.address.postal_code}</p>
+          <p class="mb-2 ps-3 font-12 color-white opacity-50"><i class="fa fa-map-marker mr-2 color-red-dark"></i>1217 ${JSON.stringify(data.location.name).replace(/\"/g, "")} Mountain Rd 201a, ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}, Idaho ${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}</p>
       </div>
       <div class="card-overlay bg-gradient"></div>
   </div>

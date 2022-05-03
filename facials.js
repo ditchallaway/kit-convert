@@ -7,7 +7,7 @@ const page = ({ title, data }) => `
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>Facials ${locations.address.business_name} | ${locations.address.administrative_district_level_1} Idaho</title>
+<title>Facials ${locations.address.business_name} | ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} Idaho</title>
 <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -60,7 +60,7 @@ const page = ({ title, data }) => `
             <div class="card-bottom text-center"> 
                 <h1 class="font-30 color-theme">Facials</h1> 
                 <h2 class="font-18 mb-2 color-highlight mt-n2">Body Hair Removal</h2> 
-                <p class="boxed-text-xl font-15 color-theme opacity-50 mb-4"> The best waxing service in ${locations.address.administrative_district_level_1} starts right here. </p> 
+                <p class="boxed-text-xl font-15 color-theme opacity-50 mb-4"> The best waxing service in ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} starts right here. </p> 
             </div>                     
             <div class="card-overlay bg-gradient-fade-small"></div>  
         </div>

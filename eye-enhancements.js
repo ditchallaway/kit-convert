@@ -7,7 +7,7 @@ const page = ({ title, data }) => `
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>Eye Enhancements ${locations.address.business_name} | ${locations.address.administrative_district_level_1} Idaho</title>
+<title>Eye Enhancements ${locations.address.business_name} | ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} Idaho</title>
 <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -124,10 +124,10 @@ const page = ({ title, data }) => `
             width="850" height="180" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
     <div class="menu-title">
         <p class="color-highlight">${JSON.stringify(data.location.name).replace(/\"/g, "")}</p>
-        <h1 class="not-gruppo">${locations.address.address_line_1}, ${locations.address.locallity}${llocations.address.administrative_district_level_1} ${locations.address.postal_code}</h1>
+        <h1 class="not-gruppo">${locations.address.address_line_1}, ${locations.address.locallity}${llocations.address.administrative_district_level_1} ${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}</h1>
     </div>
     <div class="content mt-n2">
-        <p><i class="fa fa-map-marker color-red-dark mr-2"></i> ${locations.address.address_line_1}, ${locations.address.locality}, ${locations.address.administrative_district_level_1} ${locations.address.postal_code}
+        <p><i class="fa fa-map-marker color-red-dark mr-2"></i> ${locations.address.address_line_1}, ${JSON.stringify(data.location.locality).replace(/\"/g, "")}, ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} ${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}
         </p>
         <div class="row">
             <div class="col-6">

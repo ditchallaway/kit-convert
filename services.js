@@ -2,6 +2,7 @@
 
 const axios = require('axios');
 const page = ({ title, data }) => `
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -9,7 +10,10 @@ const page = ({ title, data }) => `
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>Services ${locations.address.business_name} | ${locations.address.administrative_district_level_1} Idaho</title>
+<title>Services | 
+${JSON.stringify(data.location.name).replace(/\"/g, "")} | 
+${JSON.stringify(data.location.locality).replace(/\"/g, "")}, 
+${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}</title>
 <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -21,7 +25,7 @@ const page = ({ title, data }) => `
 <link rel="manifest" href="/site.webmanifest?v=2.0">
 <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2.0" color="#ff9c57">
 <link rel="shortcut icon" href="/favicon.ico?v=2.0">
-<meta name="apple-mobile-web-app-title" content="${JSON.stringify(data.location.name).replace(/\"/g, "")}">
+<meta name="apple-mobile-web-app-title" content="${JSON.stringify(data.location.locality).replace(/\"/g, "")}">
 <meta name="application-name" content="${JSON.stringify(data.location.name).replace(/\"/g, "")}">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#edeefb">
@@ -57,7 +61,8 @@ const page = ({ title, data }) => `
         <div class="card-bottom text-center"> 
             <h1 class="font-30 color-theme">Services</h1> 
             <h2 class="font-18 mb-2 color-highlight mt-n2">Body Waxing, Eye Enhancements, Facials</h2> 
-            <p class="boxed-text-xl font-15 color-theme opacity-50 mb-4"> The best esthtetic services in ${locations.address.administrative_district_level_1} are all right here. </p> 
+           <!-- <p class="boxed-text-xl font-15 color-theme opacity-50 mb-4"> The best damn service
+${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} are all right here. </p> -->
         </div>
         <div class="card-overlay bg-gradient-fade-small"></div>
         <div class="card card-style bg-40 m-0 bg-transparent card-overlay-infinite card-blur-image opacity-30" data-card-height="300"></div>
@@ -66,7 +71,7 @@ const page = ({ title, data }) => `
 
 
 <!--cta | start-->
-    <a href="https://square.site/book/B7XJ5944N8D2T/wax-and-skin-care-${locations.address.administrative_district_level_1}-id" class="card card-style external-link mb-4 btn btn-lg btn-full font-23 font-600 gradient-highlight rounded-m">Book Online</a> 
+    <a href="https://square.site/book/B7XJ5944N8D2T/wax-and-skin-care-${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}-id" class="card card-style external-link mb-4 btn btn-lg btn-full font-23 font-600 gradient-highlight rounded-m">Book Online</a> 
 <!--cta | end-->
 
 
@@ -135,11 +140,15 @@ const page = ({ title, data }) => `
         <div class='responsive-iframe max-iframe'><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10619.323537744858!2d-116.5655856!3d48.2868693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd859e872c1f9a599!2sWax%20and%20Skin%20Care!5e0!3m2!1sen!2sus!4v1605313586258!5m2!1sen!2sus"
                 width="850" height="180" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
         <div class="menu-title">
-            <p class="color-highlight"> ${JSON.stringify(data.location.name).replace(/\"/g, "")} </p>
-            <h1 class="not-gruppo"> ${JSON.stringify(data.location.locality).replace(/\"/g, "")}, ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}</h1>
+            <p class="color-highlight">
+${JSON.stringify(data.location.name).replace(/\"/g, "")} </p>
+            <h1 class="not-gruppo"> ${JSON.stringify(data.location.locality).replace(/\"/g, "")}$
+{JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}</h1>
         </div>
         <div class="content mt-n2">
-            <p><i class="fa fa-map-marker color-red-dark mr-2"></i> ${JSON.stringify(data.location.address_line_1).replace(/\"/g, "")}, ${JSON.stringify(data.location.locality).replace(/\"/g, "")}, ${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} ${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}
+            <p><i class="fa fa-map-marker color-red-dark mr-2"></i> ${JSON.stringify(data.location.address_line_1).replace(/\"/g, "")}$
+{JSON.stringify(data.location.locality).replace(/\"/g, "")}$
+{JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")} ${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}
             </p>
             <div class="row">
                 <div class="col-6">
@@ -170,4 +179,10 @@ const page = ({ title, data }) => `
         
         }),
       };
-    
+    ```
+${JSON.stringify(data.location.address_line_1).replace(/\"/g, "")}
+${JSON.stringify(data.location.locality).replace(/\"/g, "")}
+${JSON.stringify(data.location.administrative_district_level_1).replace(/\"/g, "")}
+${JSON.stringify(data.location.postal_code).replace(/\"/g, "")}
+
+    ```

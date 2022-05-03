@@ -1,0 +1,24 @@
+{
+  "name": "kit-convert",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ditchallaway/kit-convert.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ditchallaway/kit-convert/issues"
+  },
+  "homepage": "https://github.com/ditchallaway/kit-convert#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "hydrogen-cli": "^1.0.0"
+  }
+}
